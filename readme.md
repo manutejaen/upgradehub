@@ -22,34 +22,37 @@ Nos centraremos en copiar la estructura en HTML y el estilo en CSS, para ello ne
 - Añadir estilos en CSS (TIP: Puedes añadir varias hojas de estilos)
 - Usa BEM para poner nombre a las clases de tus elementos
 - Maquetación Desktop
+- Maquetación Tablet
 - Maquetación Mobile
 - Commits constantes con cada funcionalidad
 
 ## BONUS
 ¿La fuerza te acompaña? Utilízala para completar los bonus
-- Adapta tu diseño a Tablet
 - Transiciones y animaciones. Te invitamos a crear animaciones como las de nuestra web o a desarrollar las tuyas propias (puedes usar una librería de animaciones)
 - Que el navbar se vuelva blanco y transparente al hacer hover
-- Clona otra página de la web Upgradeo Hub y enlaza ambas páginas
+- Clona otra página de la web Upgrade Hub y enlaza ambas páginas
 - Utilizar el color `#FABADA`
 
 
 
 # Entrega
-Puedes ir haciendo subidas a Gitlab mientras programas, cuando hayas finalizado el proyecto, sube a Gitlab el código y envía un mail a tu mentor con el enlace al repositorio.
+El proyecto tendrá que estar subido antes de las 9:00am del Lunes 5 de Abril
+Puedes ir haciendo subidas a Gitlab mientras programas, cuando hayas finalizado el proyecto, sube en una rama de este proyecto con tu nombre, por ejemplo: `juan-macias`.
 
 # Presentación
+Tendrás que presentar el proyecto, será una breve presentación entre 3 y 5 minutos por persona.
+
 Cuando te enfrentes a una entrevista de trabajo tendrás que hablar de lo que has programado, así que para ir preparando tus dotes comunicativas, tendrás que presentar todos los proyectos finales de cada módulo, este proyecto incluido.
 
 Queremos que hables como Obi-Wan Kenobi, no como el maestro Yoda.
 
-Tienes que incluir los siguientes puntos en la presentación de este proyecto:
+Tienes que incluir los siguientes puntos en tu presentación:
 - ¿A qué retos te has enfrentado durante esta semana y durante el proyecto?
 - ¿Qué se te da mejor?
 - ¿Y qué peor?
 - Cual es la parte de tu código de la que te sientes mas orgulloso
 - ¿Has hecho algo extra no incluido en requisitos o bonus? ¿Qué es y por qué te has animado a hacerlo?
-- ¿Te sientes atraído por el lado oscuro? (joke)
+- ¿Te sientes atraído por el lado oscuro? (broma)
 
 
 # Desktop
