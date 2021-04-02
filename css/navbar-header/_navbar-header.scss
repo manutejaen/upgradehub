@@ -3,29 +3,34 @@
     width: 100%;
     padding: $small-gap;
     position: fixed;
+    z-index: 100;
     top: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: transparent;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
     white-space: nowrap;
     transition: all 0.3s ease 0s;
 
-    &__logo {        
+    &__logo {
         display: flex;
         align-items: center;
         flex: 1;
-        transform: scale(0.9);        
+        transform: scale(0.9);
         transition: all 0.3s ease 0s;
         @include desktop {
-            transform: scale(0.9);            
+            transform: scale(0.9);
         }
         @include tablet {
-            transform: scale(0.7);            
+            transform: scale(0.7);
         }
         @include mobile {
-            transform: scale(0.5);            
+            transform: scale(0.5);
         }
     }
     &__links-list {
@@ -33,12 +38,12 @@
         justify-content: end;
         a {
             color: white;
-            margin-right: $big-gap;            
+            margin-right: $big-gap;
         }
-        li:first-child a:after{                  
+        li:first-child a:after {
             content: "\276F";
             display: inline-block;
-            transform: rotate(90deg);            
+            transform: rotate(90deg);
             margin-left: $small-gap;
         }
 
@@ -47,42 +52,136 @@
         }
     }
 
-    &__button--red {
-        min-height: 10px;
-        position: relative;
-        padding: 8px 36px;
-        display: flex;
-        justify-content: center;
-        align-items: center;        
-        border-radius: 5px;
-        color: white;    
-        font-size: rem(12px);    
-        font-weight: 800;
-        text-align: center;                
-        border: none;
-        background-color: rgb(255, 76, 68);
-        transition: background 0.3s ease 0s;
+    &__button {
         @include desktop {
             visibility: hidden;
-        }   
-    }
-    &__button--red:hover {
-        background-color: rgb(214, 37, 27);
-        cursor: pointer;        
+        }
     }
 
     &__burguer {
-        
+        position: absolute;
+        right: $medium-gap;
+        top: $medium-gap;
         color: white;
         font-family: $html-font-family;
         font-size: rem(18px);
         visibility: hidden;
         @include desktop {
             visibility: visible;
-        }   
-       
+        }
+    }
+}
+
+.button {
+    min-height: 10px;
+    position: relative;
+    padding: 8px 36px;
+    margin-right: $small-gap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    font-size: rem(10px);
+    font-weight: 900;
+    text-align: center;
+    border: none;
+    transition: background 0.3s ease 0s;   
+}
+
+.button--red {
+    background-color: rgb(255, 76, 68);
+}
+.button--red:hover {
+    background-color: rgb(214, 37, 27);
+    cursor: pointer;
+}
+
+.button--green {
+    background-color: rgb(28, 175, 154);
+}
+.button--green:hover {
+    background-color: rgb(254, 45, 160);
+    cursor: pointer;
+}
+
+.button--pink {
+    background-color: rgb(254, 45, 160);
+}
+.button--pink:hover {
+    background-color: rgb(28, 175, 154);
+    cursor: pointer;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+.video-container {
+    width: 100%;
+    height: 65%;
+    min-height: 400px;
+    overflow: hidden;
+    position: relative;
+
+    video {
+        position: inherit;
+        min-width: 100%;
+        overflow: hidden;
+        z-index: -1;
     }
 
-
-  
+    &__header {
+        max-width: 35%;
+        margin-left: $biggest-gap;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        text-align: left;
+        z-index: 10;
+        color: white;
+        top: 45%;
+        left: 0%;
+    }
+    h1 {
+        margin-bottom: $medium-gap;
+        font-size: rem(32px);
+        font-weight: 600;
+        line-height: rem(30px);
+        white-space: nowrap;
+        transition: all 0.3s ease 0s;
+        @include tablet {
+            font-size: rem(28px);
+        }
+        @include mobile {
+            font-size: rem(24px);
+        }
+    }
+    h3 {
+        font-size: rem(14px);
+        font-weight: 600;
+        line-height: rem(20px);
+        transition: all 0.3s ease 0s;
+        @include tablet {
+            font-size: rem(12px);
+        }
+        @include tablet {
+            font-size: rem(10px);
+        }
+    }    
+    &__contact {
+        display: flex;
+        position: absolute;
+        z-index: 1;
+        bottom: 10px;
+        left: 20px;
+        visibility: hidden;
+        transition: all 0.3s ease 0s;
+        visibility: hidden;
+        .contact-button{
+            span {
+                margin-right: $smallest-gap;
+            }            
+            @include mobile {
+                visibility: visible;
+            }
+        }        
+    }   
 }

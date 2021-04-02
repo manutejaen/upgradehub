@@ -10,8 +10,8 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
+  min-width: 500px;
   font-family: "Work Sans", sans-serif;
-  font-size: 10px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -35,6 +35,7 @@ a {
   width: 100%;
   padding: 10px;
   position: fixed;
+  z-index: 100;
   top: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,10 +119,33 @@ a {
   }
 }
 
-.navbar__button--red {
+@media only screen and (max-width: 1200px) {
+  .navbar__button {
+    visibility: hidden;
+  }
+}
+
+.navbar__burguer {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.5rem;
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar__burguer {
+    visibility: visible;
+  }
+}
+
+.button {
   min-height: 10px;
   position: relative;
   padding: 8px 36px;
+  margin-right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,35 +157,137 @@ a {
           align-items: center;
   border-radius: 5px;
   color: white;
-  font-size: 1rem;
-  font-weight: 800;
+  font-size: 0.83333rem;
+  font-weight: 900;
   text-align: center;
   border: none;
-  background-color: #ff4c44;
   -webkit-transition: background 0.3s ease 0s;
   transition: background 0.3s ease 0s;
 }
 
-@media only screen and (max-width: 1200px) {
-  .navbar__button--red {
-    visibility: hidden;
-  }
+.button--red {
+  background-color: #ff4c44;
 }
 
-.navbar__button--red:hover {
+.button--red:hover {
   background-color: #d6251b;
   cursor: pointer;
 }
 
-.navbar__burguer {
+.button--green {
+  background-color: #1caf9a;
+}
+
+.button--green:hover {
+  background-color: #fe2da0;
+  cursor: pointer;
+}
+
+.button--pink {
+  background-color: #fe2da0;
+}
+
+.button--pink:hover {
+  background-color: #1caf9a;
+  cursor: pointer;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+.video-container {
+  width: 100%;
+  height: 65%;
+  min-height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-container video {
+  position: inherit;
+  min-width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-container__header {
+  max-width: 35%;
+  margin-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  text-align: left;
+  z-index: 10;
   color: white;
-  font-family: "Work Sans", sans-serif;
-  font-size: 1.5rem;
+  top: 45%;
+  left: 0%;
+}
+
+.video-container h1 {
+  margin-bottom: 16px;
+  font-size: 2.66667rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  white-space: nowrap;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+@media only screen and (max-width: 768px) {
+  .video-container h1 {
+    font-size: 2.33333rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .video-container h1 {
+    font-size: 2rem;
+  }
+}
+
+.video-container h3 {
+  font-size: 1.16667rem;
+  font-weight: 600;
+  line-height: 1.66667rem;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+@media only screen and (max-width: 768px) {
+  .video-container h3 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .video-container h3 {
+    font-size: 0.83333rem;
+  }
+}
+
+.video-container__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  left: 20px;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   visibility: hidden;
 }
 
-@media only screen and (max-width: 1200px) {
-  .navbar__burguer {
+.video-container__contact .contact-button span {
+  margin-right: 6px;
+}
+
+@media only screen and (max-width: 576px) {
+  .video-container__contact .contact-button {
     visibility: visible;
   }
 }
