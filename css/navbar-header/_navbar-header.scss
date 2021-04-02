@@ -1,0 +1,88 @@
+.navbar {
+    height: 60px;
+    width: 100%;
+    padding: $small-gap;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0,0,0,0) 100%);
+    white-space: nowrap;
+    transition: all 0.3s ease 0s;
+
+    &__logo {        
+        display: flex;
+        align-items: center;
+        flex: 1;
+        transform: scale(0.9);        
+        transition: all 0.3s ease 0s;
+        @include desktop {
+            transform: scale(0.9);            
+        }
+        @include tablet {
+            transform: scale(0.7);            
+        }
+        @include mobile {
+            transform: scale(0.5);            
+        }
+    }
+    &__links-list {
+        display: flex;
+        justify-content: end;
+        a {
+            color: white;
+            margin-right: $big-gap;            
+        }
+        li:first-child a:after{                  
+            content: "\276F";
+            display: inline-block;
+            transform: rotate(90deg);            
+            margin-left: $small-gap;
+        }
+
+        @include desktop {
+            visibility: hidden;
+        }
+    }
+
+    &__button--red {
+        min-height: 10px;
+        position: relative;
+        padding: 8px 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+        border-radius: 5px;
+        color: white;    
+        font-size: rem(12px);    
+        font-weight: 800;
+        text-align: center;                
+        border: none;
+        background-color: rgb(255, 76, 68);
+        transition: background 0.3s ease 0s;
+        @include desktop {
+            visibility: hidden;
+        }   
+    }
+    &__button--red:hover {
+        background-color: rgb(214, 37, 27);
+        cursor: pointer;        
+    }
+
+    &__burguer {
+        
+        color: white;
+        font-family: $html-font-family;
+        font-size: rem(18px);
+        visibility: hidden;
+        @include desktop {
+            visibility: visible;
+        }   
+       
+    }
+
+
+  
+}
