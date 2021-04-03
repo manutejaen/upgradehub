@@ -37,7 +37,7 @@ h4 {
 }
 
 .live {
-    margin: $biggest-gap*2 0;
+    margin: $biggest-gap 0;
     padding: 20px 20%;
     text-align: center;
     span {
@@ -45,30 +45,30 @@ h4 {
     }
 }
 
-
 .plans {
-    padding: 25px 10%;    
-    margin: 0 auto;   
-    margin-bottom: $biggest-gap; 
-    display: flex;        
+    padding: 25px 10%;
+    margin: 0 auto;
+    margin-bottom: $biggest-gap;
+    display: flex;
+    justify-content: center;
 }
 
 .bootcamps {
     display: flex;
-    flex-wrap: wrap;        
+    flex-wrap: wrap;
 }
 
-.card {   
+.card {
     flex-basis: 47%;
     display: flex;
     align-items: center;
-    justify-content: space-between;    
+    justify-content: space-between;
     padding: 10px 20px;
     margin: 4px $smallest-gap;
     white-space: nowrap;
     border-radius: 5px;
-    background: rgb(251, 251, 253);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 5px 0px;    
+    background: rgb(255, 251, 251);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 5px 0px;
     transition: all 0.3s ease 0s;
     &:hover {
         box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
@@ -78,60 +78,56 @@ h4 {
     @include desktop {
         flex-basis: 100%;
     }
-
 }
 
-.time-plans{
+.time-plans {
     margin-left: $biggest-gap;
     flex-basis: 40%;
-    display: flex;  
-    flex-direction: column;      
-    justify-content: center;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     &__card {
-        display: flex;    
+        display: flex;
         &__text {
             display: flex;
             flex-direction: column;
             white-space: nowrap;
-        }        
+        }
     }
 }
-
-
-
 
 .companies {
     padding: 25px 10%;
     margin: 0 auto;
     margin-bottom: $biggest-gap;
-    display: flex;          
-    flex-wrap: wrap;   
+    display: flex;
+    flex-wrap: wrap;
     &__head-text {
         margin-bottom: $big-gap;
         display: flex;
-        flex-wrap: wrap;   
-        &__title {   
+        flex-wrap: wrap;
+        &__title {
             flex-basis: 47%;
             display: flex;
             align-items: center;
-            justify-content: space-between;    
-            padding: 10px 30px;                 
+            justify-content: space-between;
+            padding: 10px 30px;
             @include desktop {
                 flex-basis: 100%;
-            }            
-        }     
-        &__text {   
+            }
+        }
+        &__text {
             flex-basis: 47%;
             display: flex;
             align-items: center;
-            justify-content: space-between;    
-            padding: 10px 30px;                 
+            justify-content: space-between;
+            padding: 10px 30px;
             @include desktop {
                 flex-basis: 100%;
-            }            
-        }     
+            }
+        }
     }
-    &__companies-logos {        
+    &__companies-logos {
         display: flex;
         flex-wrap: wrap;
         /* row-gap: $biggest-gap;
@@ -139,14 +135,14 @@ h4 {
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 20% 20% 20% 20% 20%; */
         &__logo-container {
-            flex-basis: 13%;            
+            flex-basis: 13%;
             margin: $big-gap;
             transition: all 0.3s ease 0s;
-            img {     
+            img {
                 object-fit: contain;
                 width: 100%;
-                max-height: 100%;  
-            }     
+                max-height: 100%;
+            }
             @include desktop {
                 flex-basis: 15%;
             }
@@ -157,9 +153,123 @@ h4 {
                 flex-basis: 30%;
             }
         }
-
     }
-   
+}
+
+.opinions {   
+    &__title {        
+        white-space: nowrap;
+        text-align: center;
+        margin-bottom: $big-gap;
+    }
+    &__upgraders-container {        
+        display: flex;
+        flex-wrap: wrap;                
+        .upgrader {                
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            flex-grow: 1;
+            color: white;
+            flex-basis: 25%;
+            background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.8));
+            background-blend-mode: multiply;
+            background-size: cover;
+
+            @include tablet-portrait() {
+                flex-basis: 50%;
+            }
+
+            @include mobile() {
+                flex-basis: 100%;
+            }
+            img {        
+                width: 100%;          
+                z-index: -1;
+                
+            }          
+            &__text {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                position: absolute;
+                padding: $big-gap;
+                h3 {
+                    margin-bottom: $smallest-gap;                    
+                }
+            }
+        }
+    }
+}
+
+.whatis {
+    padding: 25px 10%;
+    margin: 0 auto;
+    margin-bottom: $biggest-gap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
+
+.boot-section {
+    padding: 0 15%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .card-bootcamp {
+        position: relative;
+        display: flex;        
+        flex-basis: 50%;        
+        flex-direction: column;    
+        transition: all 0.3s ease 0s; 
+        @include tablet-portrait() {
+            flex-basis: 100%;
+        }                   
+        @include mobile() {
+            flex-basis: 100%;
+        }
+        
+        .bootcamp__text{
+            position: absolute;
+            top: 10%;
+            left: 1%;
+            color: white;
+            h2, p {
+                padding: $big-gap;
+            }
+            p {
+                font-size: rem(14px);
+                line-height: rem(20px) ;
+                @include desktop {
+                    font-size: rem(12px);
+                    line-height: rem(18px) ;
+                }                   
+                @include mobile() {
+                    font-size: rem(10px);
+                    line-height: rem(16px) ;
+                }
+            }
+            hr {
+                margin-left: 20px;
+                margin-right: 20px;            
+            }            
+        }
+        button {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+        }
+        figure {
+            overflow: hidden;
+            display: flex;            
+            flex-wrap: wrap;            
+        }
+        img {
+            min-height: 100%;
+            max-width: 100%;             
+        }
+    }
+}
