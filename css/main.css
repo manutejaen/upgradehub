@@ -291,4 +291,161 @@ a {
     visibility: visible;
   }
 }
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.66667rem;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.16667rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+h3 {
+  font-size: 1.33333rem;
+  font-weight: 600;
+  line-height: 1.66667rem;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+@media only screen and (max-width: 768px) {
+  h3 {
+    font-size: 1.16667rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+h4 {
+  font-size: 1.16667rem;
+  font-weight: 400;
+  line-height: 1.66667rem;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+@media only screen and (max-width: 768px) {
+  h4 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h4 {
+    font-size: 0.83333rem;
+  }
+}
+
+.live {
+  margin: 50px 0;
+  padding: 20px 20%;
+  text-align: center;
+}
+
+.live span {
+  background-color: #ffff7c;
+}
+
+.plans {
+  padding: 25px 10%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bootcamps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card {
+  -ms-flex-preferred-size: 47%;
+      flex-basis: 47%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 20px;
+  margin: 4px 6px;
+  white-space: nowrap;
+  border-radius: 5px;
+  background: #fbfbfd;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 5px 0px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 5px 0px;
+  -webkit-transition: -webkit-box-shadow 0.3s ease 0s;
+  transition: -webkit-box-shadow 0.3s ease 0s;
+  transition: box-shadow 0.3s ease 0s;
+  transition: box-shadow 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+}
+
+.card:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+.time-plans {
+  margin-left: 40px;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.time-plans__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.time-plans__card__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  white-space: nowrap;
+}
 /*# sourceMappingURL=main.css.map */

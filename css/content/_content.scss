@@ -1,0 +1,97 @@
+h2 {
+    font-size: rem(18px);
+    font-weight: 600;
+    line-height: rem(20px);
+    transition: all 0.3s ease 0s;
+    @include tablet {
+        font-size: rem(14px);
+    }
+    @include tablet {
+        font-size: rem(12px);
+    }
+}
+h3 {
+    font-size: rem(16px);
+    font-weight: 600;
+    line-height: rem(20px);
+    transition: all 0.3s ease 0s;
+    @include tablet {
+        font-size: rem(14px);
+    }
+    @include tablet {
+        font-size: rem(12px);
+    }
+}
+
+h4 {
+    font-size: rem(14px);
+    font-weight: 400;
+    line-height: rem(20px);
+    transition: all 0.3s ease 0s;
+    @include tablet {
+        font-size: rem(12px);
+    }
+    @include tablet {
+        font-size: rem(10px);
+    }
+}
+
+.live {
+    margin:50px 0;
+    padding: 20px 20%;
+    text-align: center;
+    span {
+        background-color: rgb(255, 255, 124);
+    }
+}
+
+
+.plans {
+    padding: 25px 10%;
+    margin: 0 auto;
+    display: flex;        
+}
+
+.bootcamps {
+    display: flex;
+    flex-wrap: wrap;        
+}
+
+.card {   
+    flex-basis: 47%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    padding: 10px 20px;
+    margin: 4px $smallest-gap;
+    white-space: nowrap;
+    border-radius: 5px;
+    background: rgb(251, 251, 253);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 5px 0px;    
+    transition: box-shadow 0.3s ease 0s;
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
+        cursor: pointer;
+    }
+
+    @include desktop {
+        flex-basis: 100%;
+    }
+
+}
+
+.time-plans{
+    margin-left: $biggest-gap;
+    flex-basis: 40%;
+    display: flex;  
+    flex-direction: column;      
+    justify-content: center;    
+    &__card {
+        display: flex;    
+        &__text {
+            display: flex;
+            flex-direction: column;
+            white-space: nowrap;
+        }        
+    }
+}
