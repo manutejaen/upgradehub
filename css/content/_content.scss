@@ -215,34 +215,34 @@ h4 {
 
 
 .boot-section {
-    padding: 0 15%;
+    padding: 0 20%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
     .card-bootcamp {
         position: relative;
         display: flex;        
         flex-basis: 50%;        
-        flex-direction: column;    
+        flex-direction: column;            
         transition: all 0.3s ease 0s; 
         @include tablet-portrait() {
             flex-basis: 100%;
-        }                   
-        @include mobile() {
-            flex-basis: 100%;
-        }
+        }                          
         
         .bootcamp__text{
             position: absolute;
-            top: 10%;
-            left: 1%;
+            top: 10%;          
             color: white;
+            margin: $medium-gap;
             h2, p {
-                padding: $big-gap;
+                padding: $medium-gap;
             }
             p {
                 font-size: rem(14px);
                 line-height: rem(20px) ;
+                opacity: 0;
+                transition: all 0.3s ease 0s;
                 @include desktop {
                     font-size: rem(12px);
                     line-height: rem(18px) ;
@@ -253,8 +253,8 @@ h4 {
                 }
             }
             hr {
-                margin-left: 20px;
-                margin-right: 20px;            
+                margin-left: $big-gap;
+                margin-right: $big-gap;            
             }            
         }
         button {
@@ -263,13 +263,47 @@ h4 {
             right: 5%;
         }
         figure {
-            overflow: hidden;
-            display: flex;            
-            flex-wrap: wrap;            
+            overflow: hidden;            
         }
         img {
             min-height: 100%;
             max-width: 100%;             
         }
+    }
+    .card-bootcamp:hover {        
+        background-color: rgba(240, 89, 89, 0.39);        
+        p {
+            opacity: 100%;
+        }
+    }
+}
+
+.choose{
+    padding: 0 20%;
+    display: flex;
+    flex-wrap: wrap;       
+    &__card  {
+        margin: $small-gap;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        flex:1;
+        flex-basis:25%;
+        @include desktop {
+            flex-basis:40%;
+        }  
+        @include mobile {
+            p {
+                display: none;
+            }
+        }                               
+    }
+    &__text {    
+        margin: $biggest-gap;
+        display: flex;
+        align-items: center;   
+        justify-content: center;     
+        flex: 1;                  
+        flex-basis: 100%;       
     }
 }
