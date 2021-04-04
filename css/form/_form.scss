@@ -1,0 +1,81 @@
+
+
+
+
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5% 5%;
+    background-color:  rgb(48, 20, 86);
+    transition: all 0.3s ease 0s;
+    &__text {        
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        flex-basis: 20%;
+        transition: all 0.3s ease 0s;
+        @include desktop {
+            flex-basis: 50%;
+        }
+        h1 {
+            @include desktop {                               
+                padding-right: 10%;
+                padding-left: 10%;
+            }
+        }
+        p {
+            margin: 15px 150px 15px 0px;
+            font-size: rem(16px);
+            line-height: rem(22px);
+            @include desktop {
+                margin: 15px 0px 15px 0px;
+                padding-right: 10%;
+                padding-left: 10%;
+            }
+        }
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        flex-basis: 20%;
+        transition: all 0.3s ease 0s;
+        @include desktop {
+            flex-basis: 100%;
+            padding-right: 10%;
+            padding-left: 10%;
+        }
+        fieldset {           
+            display: flex;
+            flex-direction: column;
+            .input-box {
+                margin: $medium-gap;
+                flex: 1; 
+                input {
+                    height: 40px;
+                    width: 100%;
+                    border-radius: 5px;                    
+                    border: none;
+                }
+                .label-box {                    
+                    margin-bottom: $medium-gap;
+                    font-size: rem(16px);
+                }            
+            }
+        }
+        .terms {
+            padding: $medium-gap;
+            &__check{
+                padding-bottom: $big-gap;
+                a {
+                    text-decoration: underline;
+                    color: white;
+                }
+            }
+        }
+    }
+}

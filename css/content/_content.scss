@@ -284,11 +284,26 @@ h4 {
     flex-wrap: wrap;       
     &__card  {
         margin: $small-gap;
+        margin-bottom: $biggest-gap;
         display: flex;
         flex-direction: column;
         justify-content: left;
         flex:1;
         flex-basis:25%;
+        h2 {
+            font-size: 32px;
+            line-height: 28px;
+            font-weight: bolder;
+        }
+        h3 {
+            margin-bottom: $biggest-gap*1.1;
+            font-size: 26px;
+            line-height: 26px;
+        }
+        p {
+            font-size: 20px;
+            line-height: 24px;
+        }
         @include desktop {
             flex-basis:40%;
         }  

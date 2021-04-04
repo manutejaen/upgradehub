@@ -76,10 +76,7 @@
     min-height: 10px;
     position: relative;
     padding: 8px 36px;
-    margin-right: $small-gap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-right: $small-gap;        
     border-radius: 5px;
     color: white;
     font-size: rem(10px);
@@ -113,6 +110,14 @@
     cursor: pointer;
 }
 
+.button--submit {
+    background-color: rgba(225, 225, 225, 0.5);
+}
+.button--submit:hover {
+    background-color: rgba(225, 225, 225, 0.3);
+    cursor: pointer;
+}
+
 /* Style the video: 100% width and height to cover the entire window */
 .video-container {
     width: 100%;
@@ -140,32 +145,7 @@
         top: 45%;
         left: 0%;
     }
-    h1 {
-        margin-bottom: $medium-gap;
-        font-size: rem(32px);
-        font-weight: 600;
-        line-height: rem(30px);
-        white-space: nowrap;
-        transition: all 0.3s ease 0s;
-        @include tablet {
-            font-size: rem(28px);
-        }
-        @include mobile {
-            font-size: rem(24px);
-        }
-    }
-    h3 {
-        font-size: rem(14px);
-        font-weight: 600;
-        line-height: rem(20px);
-        transition: all 0.3s ease 0s;
-        @include tablet {
-            font-size: rem(12px);
-        }
-        @include tablet {
-            font-size: rem(10px);
-        }
-    }    
+     
     &__contact {
         display: flex;
         position: absolute;
