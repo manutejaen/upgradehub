@@ -95,18 +95,26 @@
 }
 
 .button--green {
-    background-color: rgb(28, 175, 154);
+    background-color: rgb(97, 207, 191);    
 }
 .button--green:hover {
-    background-color: rgb(254, 45, 160);
+    background-color: rgb(28, 175, 154);
     cursor: pointer;
 }
 
 .button--pink {
-    background-color: rgb(254, 45, 160);
+    background-color: rgb(255, 86, 179);
 }
 .button--pink:hover {
-    background-color: rgb(28, 175, 154);
+    background-color: rgb(253, 18, 148);
+    cursor: pointer;
+}
+
+.button--yellow {
+    background-color: rgb(240, 254, 45);
+}
+.button--yellow:hover {
+    background-color: rgb(255, 212, 19);
     cursor: pointer;
 }
 
@@ -116,6 +124,10 @@
 .button--submit:hover {
     background-color: rgba(225, 225, 225, 0.3);
     cursor: pointer;
+}
+
+.black {
+    color: black;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
@@ -146,22 +158,25 @@
         left: 0%;
     }
      
-    &__contact {
-        display: flex;
-        position: absolute;
-        z-index: 1;
-        bottom: 10px;
-        left: 20px;
-        visibility: hidden;
-        transition: all 0.3s ease 0s;
-        visibility: hidden;
-        .contact-button{
-            span {
-                margin-right: $smallest-gap;
-            }            
-            @include mobile {
-                visibility: visible;
-            }
-        }        
-    }   
+      
 }
+
+
+.contact-buttons {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    bottom: 10px;
+    white-space: nowrap;
+    left: 12%;    
+    transition: all 0.3s ease 0s;
+    visibility: hidden;
+    .contact-button{        
+        span {
+            margin-right: $smallest-gap;
+        }            
+        @include mobile {
+            visibility: visible;
+        }
+    }        
+} 

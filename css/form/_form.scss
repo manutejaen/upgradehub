@@ -71,8 +71,9 @@
             padding: $medium-gap;
             &__check{
                 padding-bottom: $big-gap;
+                line-height: 20px;
                 a {
-                    text-decoration: underline;
+                    text-decoration: underline;                    
                     color: white;
                 }
             }

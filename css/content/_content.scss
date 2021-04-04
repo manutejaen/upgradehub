@@ -49,13 +49,16 @@ h4 {
     padding: 25px 10%;
     margin: 0 auto;
     margin-bottom: $biggest-gap;
-    display: flex;
-    justify-content: center;
+    display: flex;    
+    @include tablet {
+        flex-direction: column;
+    }
 }
 
 .bootcamps {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: $big-gap;    
 }
 
 .card {
@@ -64,7 +67,8 @@ h4 {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    margin: 4px $smallest-gap;
+    margin-right: $smallest-gap;
+    margin-bottom: $smallest-gap;
     white-space: nowrap;
     border-radius: 5px;
     background: rgb(255, 251, 251);
@@ -77,6 +81,7 @@ h4 {
 
     @include desktop {
         flex-basis: 100%;
+        margin-right: 0;
     }
 }
 
@@ -86,6 +91,9 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include tablet {
+        margin-left: 0;
+    }
     &__card {
         display: flex;
         &__text {
@@ -225,7 +233,7 @@ h4 {
         display: flex;        
         flex-basis: 50%;        
         flex-direction: column;            
-        transition: all 0.3s ease 0s; 
+        transition: all 0.3s ease 0s;                 
         @include tablet-portrait() {
             flex-basis: 100%;
         }                          
@@ -260,22 +268,30 @@ h4 {
         button {
             position: absolute;
             top: 5%;
-            right: 5%;
+            right: 5%;            
         }
         figure {
             overflow: hidden;            
         }
         img {
             min-height: 100%;
-            max-width: 100%;             
-        }
+            max-width: 100%;               
+        }       
     }
-    .card-bootcamp:hover {        
-        background-color: rgba(240, 89, 89, 0.39);        
+    .card-bootcamp:hover {                       
         p {
             opacity: 100%;
         }
+        img {
+            transition: opacity 0.3s ease 0s;
+            opacity: 0;
+        }        
     }
+    .pink-back {background-color: rgb(253, 18, 148);}
+    .green-back {background-color: rgb(28, 175, 154);}
+    .blue-back {background-color: rgb(66, 94, 252);}
+    .violet-back{background-color: rgb(122, 66, 252);}
+
 }
 
 .choose{
