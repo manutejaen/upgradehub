@@ -49,7 +49,7 @@ h4 {
     padding: 25px 10%;
     margin: 0 auto;
     margin-bottom: $biggest-gap;
-    display: flex;    
+    display: flex;
     @include tablet {
         flex-direction: column;
     }
@@ -58,7 +58,7 @@ h4 {
 .bootcamps {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: $big-gap;    
+    margin-bottom: $big-gap;
 }
 
 .card {
@@ -164,16 +164,16 @@ h4 {
     }
 }
 
-.opinions {   
-    &__title {        
+.opinions {
+    &__title {
         white-space: nowrap;
         text-align: center;
         margin-bottom: $big-gap;
     }
-    &__upgraders-container {        
+    &__upgraders-container {
         display: flex;
-        flex-wrap: wrap;                
-        .upgrader {                
+        flex-wrap: wrap;
+        .upgrader {
             position: relative;
             display: flex;
             flex-direction: column;
@@ -192,11 +192,10 @@ h4 {
             @include mobile() {
                 flex-basis: 100%;
             }
-            img {        
-                width: 100%;          
+            img {
+                width: 100%;
                 z-index: -1;
-                
-            }          
+            }
             &__text {
                 display: flex;
                 flex-direction: column;
@@ -204,7 +203,7 @@ h4 {
                 position: absolute;
                 padding: $big-gap;
                 h3 {
-                    margin-bottom: $smallest-gap;                    
+                    margin-bottom: $smallest-gap;
                 }
             }
         }
@@ -220,8 +219,6 @@ h4 {
     justify-content: center;
 }
 
-
-
 .boot-section {
     padding: 0 20%;
     display: flex;
@@ -230,89 +227,134 @@ h4 {
 
     .card-bootcamp {
         position: relative;
-        display: flex;        
-        flex-basis: 50%;        
-        flex-direction: column;            
-        transition: all 0.3s ease 0s;                 
+        display: flex;
+        flex-basis: 50%;
+        flex-direction: column;
+        transition: all 0.3s ease 0s;
         @include tablet-portrait() {
             flex-basis: 100%;
-        }                          
-        
-        .bootcamp__text{
+        }
+        .bootcamp__text {
             position: absolute;
-            top: 10%;          
+            display: flex;
+            flex-direction: column;
+            top: 10%;
             color: white;
             margin: $medium-gap;
-            h2, p {
+            h2,
+            p {
                 padding: $medium-gap;
             }
-            p {
+            p {                
                 font-size: rem(14px);
-                line-height: rem(20px) ;
+                line-height: rem(20px);
                 opacity: 0;
                 transition: all 0.3s ease 0s;
                 @include desktop {
                     font-size: rem(12px);
-                    line-height: rem(18px) ;
-                }                   
+                    line-height: rem(18px);
+                }
                 @include mobile() {
                     font-size: rem(10px);
-                    line-height: rem(16px) ;
+                    line-height: rem(16px);
                 }
             }
+
             hr {
                 margin-left: $big-gap;
-                margin-right: $big-gap;            
-            }            
+                margin-right: $big-gap;
+                transform-origin: 0 center;
+                transform: scaleX(0);
+                transition: 0.5s ease;
+            }
+            .arrow {
+                align-self: flex-end;
+                justify-self: flex-end;                
+                min-height: 20px;                
+                span {
+                    height: 0;
+                    width: 30px;
+                    border: 1px white solid;
+                    background: white;
+                    display: block;
+                    transform-origin: 27px center;
+                    border-radius: 10px;
+                }
+
+                span:first-child {
+                    transform: rotate(45deg);
+                }
+                span:last-child {
+                    transform: rotate(-45deg);
+                }
+                span:nth-child(2) {
+                    transform: scaleX(0);
+                    transform-origin: 31px center;
+                    transition: 0.5s ease;
+                }
+            }
         }
         button {
             position: absolute;
             top: 5%;
-            right: 5%;            
+            right: 5%;
         }
         figure {
-            overflow: hidden;            
+            overflow: hidden;
         }
         img {
             min-height: 100%;
-            max-width: 100%;               
-        }       
+            max-width: 100%;
+        }
     }
-    .card-bootcamp:hover {                       
+    .card-bootcamp:hover {
         p {
             opacity: 100%;
         }
         img {
             transition: opacity 0.3s ease 0s;
-            opacity: 0;
-        }        
+            opacity: 20%;
+        }
+        hr {
+            transform: scaleX(1);
+        }
+        .arrow span:nth-child(2) {
+            transform: scaleX(2);
+        }
     }
-    .pink-back {background-color: rgb(253, 18, 148);}
-    .green-back {background-color: rgb(28, 175, 154);}
-    .blue-back {background-color: rgb(66, 94, 252);}
-    .violet-back{background-color: rgb(122, 66, 252);}
-
+    .pink-back {
+        background-color: rgb(253, 18, 148);
+    }
+    .green-back {
+        background-color: rgb(28, 175, 154);
+    }
+    .blue-back {
+        background-color: rgb(66, 94, 252);
+    }
+    .violet-back {
+        background-color: rgb(122, 66, 252);
+    }
 }
 
-.choose{
+.choose {
     padding: 0 20%;
     display: flex;
-    flex-wrap: wrap;       
-    &__card  {
+    flex-wrap: wrap;
+    &__card {
         margin: $small-gap;
         margin-bottom: $biggest-gap;
         display: flex;
         flex-direction: column;
         justify-content: left;
-        flex:1;
-        flex-basis:25%;
+        flex: 1;
+        flex-basis: 25%;
         h2 {
             font-size: 32px;
             line-height: 28px;
             font-weight: bolder;
         }
         h3 {
-            margin-bottom: $biggest-gap*1.1;
+            margin-bottom: $biggest-gap * 1.1;
             font-size: 26px;
             line-height: 26px;
         }
@@ -321,20 +363,20 @@ h4 {
             line-height: 24px;
         }
         @include desktop {
-            flex-basis:40%;
-        }  
+            flex-basis: 40%;
+        }
         @include mobile {
             p {
                 display: none;
             }
-        }                               
+        }
     }
-    &__text {    
+    &__text {
         margin: $biggest-gap;
         display: flex;
-        align-items: center;   
-        justify-content: center;     
-        flex: 1;                  
-        flex-basis: 100%;       
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        flex-basis: 100%;
     }
 }

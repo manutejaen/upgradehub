@@ -781,12 +781,20 @@ h4 {
 
 .boot-section .card-bootcamp .bootcamp__text {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   top: 10%;
   color: white;
   margin: 16px;
 }
 
-.boot-section .card-bootcamp .bootcamp__text h2, .boot-section .card-bootcamp .bootcamp__text p {
+.boot-section .card-bootcamp .bootcamp__text h2,
+.boot-section .card-bootcamp .bootcamp__text p {
   padding: 16px;
 }
 
@@ -815,6 +823,49 @@ h4 {
 .boot-section .card-bootcamp .bootcamp__text hr {
   margin-left: 26px;
   margin-right: 26px;
+  -webkit-transform-origin: 0 center;
+          transform-origin: 0 center;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.boot-section .card-bootcamp .bootcamp__text .arrow {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  justify-self: flex-end;
+  min-height: 20px;
+}
+
+.boot-section .card-bootcamp .bootcamp__text .arrow span {
+  height: 0;
+  width: 30px;
+  border: 1px white solid;
+  background: white;
+  display: block;
+  -webkit-transform-origin: 27px center;
+          transform-origin: 27px center;
+  border-radius: 10px;
+}
+
+.boot-section .card-bootcamp .bootcamp__text .arrow span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.boot-section .card-bootcamp .bootcamp__text .arrow span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.boot-section .card-bootcamp .bootcamp__text .arrow span:nth-child(2) {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 31px center;
+          transform-origin: 31px center;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .boot-section .card-bootcamp button {
@@ -839,7 +890,17 @@ h4 {
 .boot-section .card-bootcamp:hover img {
   -webkit-transition: opacity 0.3s ease 0s;
   transition: opacity 0.3s ease 0s;
-  opacity: 0;
+  opacity: 20%;
+}
+
+.boot-section .card-bootcamp:hover hr {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.boot-section .card-bootcamp:hover .arrow span:nth-child(2) {
+  -webkit-transform: scaleX(2);
+          transform: scaleX(2);
 }
 
 .boot-section .pink-back {
